@@ -1,0 +1,203 @@
+<div class="box box-info">
+    <div class="box-header with-border">
+         <h3 class="box-title">Cadastro de Exames</h3>
+    </div>
+
+<div class="col-sm-3 col-xs-12">
+    <input placeholder="Numero de Acesso" class="form-control" 
+           [(ngModel)]="exame.acesso"
+           minlength="2" maxlength="200" autofocus/>
+</div>
+
+<div class="col-sm-3 col-xs-12">
+    <input placeholder="Nome do Exame" class="form-control" 
+           [(ngModel)]="exame.exame"
+           minlength="2" maxlength="200" autofocus/>
+</div>
+
+<div class="col-sm-3 col-xs-12">
+    <input placeholder="Data do Exame" class="form-control"
+            [(ngModel)]="exame.dataExame"
+            data-inputmask="'alias': 'dd/mm/yyyy'" data-mask
+            autofocus>
+</div>
+
+<div class="box-footer">
+  
+</div>  
+
+</div>
+
+<div class="col-md-4">
+<div class="box box-info">
+   <div class="box-header with-border">
+       <h3 class="box-title"> Crânio Caudal </h3>  
+   </div>
+
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.ccBuckBaixo"  type="checkbox">
+             Buck Baixo
+       </label>
+   </div>
+
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.ccDP" type="checkbox">
+             Dobras na Pele 
+       </label>
+   </div>
+
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.ccMPerf" type="checkbox">
+             Mamilo Perfilado 
+       </label>
+   </div>
+
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.ccMPeit" type="checkbox">
+             Músculo Peitoral
+       </label>
+   </div>
+
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.ccPL" type="checkbox">
+             Porção Lateal
+       </label>
+   </div>
+
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.ccPM" type="checkbox">
+             Porção Medial
+       </label>
+   </div>
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.ccSimetria" type="checkbox">
+             Simetria
+       </label>
+   </div>
+</div>   
+</div>
+
+
+
+<div class="col-md-4">
+<div class="box box-info">
+   <div class="box-header with-border">
+       <h3 class="box-title"> Médio Lateral Obliqua</h3>  
+   </div>
+
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.mloAI" type="checkbox">
+             Ângulo Inframamário
+       </label>
+   </div>
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.mloDPA" type="checkbox">
+             Dobra Prol. Axila
+       </label>
+   </div>
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.mloDP" type="checkbox">
+             Dobras na Pele
+       </label>
+   </div>
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.mloMP" type="checkbox">
+             Mama Pêndula
+       </label>
+   </div>
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.mloMPerf" type="checkbox">
+             Mamilo Perfilado
+       </label>
+   </div>
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.mloMPAM" type="checkbox">
+              Peitoral na Altura do Mamilo
+       </label>
+   </div>
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.mloPC" type="checkbox">
+              Peitoral Contraido
+       </label>
+   </div>
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.mloPM" type="checkbox">
+              Peitoral Menor
+       </label>
+   </div>
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.mloSimetria" type="checkbox">
+              Simetria
+       </label>
+   </div>
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.mloTT" type="checkbox">
+              Todo Tecido
+       </label>
+   </div>
+
+</div>   
+</div>
+
+<div class="col-md-4">
+<div class="box box-info">
+   <div class="box-header with-border">
+       <h3 class="box-title"> Erros</h3>  
+   </div>
+
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.eart" type="checkbox">
+              Artefatos
+       </label>
+   </div>
+
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.econt" type="checkbox">
+              Contraste
+       </label>
+   </div>
+
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.edef" type="checkbox">
+              Definição
+       </label>
+   </div>
+
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.eod" type="checkbox">
+              OD
+       </label>
+   </div>
+   <div class="checkbox">
+        <label>
+           <input [(ngModel)]="exame.eruido" type="checkbox">
+              Ruido
+       </label>
+   </div>
+
+</div>   
+</div>
+
+
+<button class="btn btn-info pull-right" (click)='createExame()'>Salvar</button>

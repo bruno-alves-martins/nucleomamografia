@@ -1,0 +1,56 @@
+<nm-curso-form></nm-curso-form>
+
+
+<div  class="col-xs-12 table-responsive"  >
+        <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Simple Full Width Table</h3>
+
+              <div class="box-tools">
+                <ul class="pagination pagination-sm no-margin pull-right">
+                  <li><a href="#">&laquo;</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">&raquo;</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- /.box-header -->
+       <table class="table table-striped">
+                      <thead>
+                      <tr>
+                        <th class="text-center">Nome</th>
+                        <th class="text-center">Publico</th>
+                        <th class="text-center">Objetivo</th>
+                        <th class="text-right">Requisitos</th>
+                        <th class="text-right"></th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr *ngFor="let curso of cursos | async"  >
+                        
+                        <td class="text-center">
+                              {{ curso.nome }}   
+                        </td>
+                        <td class="text-center" >
+                              {{ curso.publico }}       
+                        </td>
+                        <td  class="text-center">
+                              {{ curso.objetivo }}   
+                        </td>
+                        <td  class="text-center">
+                              {{ curso.requisitos }}   
+                        </td>
+                        <td class="text-center" >
+                          <a (click)="deleteItem(curso)" class="btn btn-sm danger"><i class="fa fa-remove"></i></a>
+                        </td>  
+
+                         
+                      </tr>
+                     </tbody>
+                     </table>                         
+           </div>
+</div>
+
+

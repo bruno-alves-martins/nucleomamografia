@@ -1,0 +1,30 @@
+<div class="box box-info">
+    <div class="box-header with-border">
+         <h3 class="box-title">Cadastro de Cursos</h3>
+    </div>
+
+<div class="col-sm-6 col-xs-12">
+    <input placeholder="Nome do Curso" class="form-control"
+            [(ngModel)]="curso.nome"  minlength="2" maxlength="200" #nome='ngModel' autofocus>
+</div>
+
+<div class="col-sm-6 col-xs-12">
+    <input placeholder="Publico" class="form-control"
+            [(ngModel)]="curso.publico"  minlength="2" maxlength="200" #publico='ngModel' autofocus>
+</div>
+<div class="col-sm-6 col-xs-12">
+    <textarea placeholder="Objetivo" class="form-control"
+            [(ngModel)]="curso.objetivo" rows="3"  minlength="2" maxlength="200" #objetivo='ngModel' autofocus></textarea>
+</div>
+<div class="col-sm-6 col-xs-12">
+    <textarea placeholder="Requisitos" class="form-control"
+            [(ngModel)]="curso.requisitos" rows="3" minlength="2" maxlength="200" #requisitos='ngModel' autofocus></textarea>
+</div>
+
+<div class="box-footer">
+  <button class="btn btn-info pull-right" (click)='createCurso()'>Salvar</button>
+</div>  
+
+
+
+</div>
